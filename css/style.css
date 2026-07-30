@@ -1,0 +1,473 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    /* height: 1000px; */
+    background-color: tan;
+    display: grid;
+    /* grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 100px 100px; */
+
+   /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+   grid-template-columns: repeat(4,1fr);
+   /* grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); */
+   gap: 20px 10px;
+   /* column-gap: 10px;
+   row-gap: 20px; */
+
+
+
+
+
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-evenly; */
+}
+.item{
+    /* width: 200px; */
+    height: 200px;
+    background-color: teal;
+    border: 1px solid rosybrown;
+    text-align: center;
+    color: white;
+    /* flex-grow: 1;
+    flex-shrink: 1;  */
+}
+.item2{
+    background-color: rosybrown;
+    /* grid-column: 2/4; */
+    grid-column: span 2;
+    /* flex-grow: 2;
+    flex-shrink: 0;
+    order: 1; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.home{
+    height: 100vh;
+    background-image: url(../images/header-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+nav{
+    
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+nav h2{
+  
+    width: 50%;
+    font-style: italic;
+    color: var(--main-color);
+}
+nav ul {
+    
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+nav ul li{
+    
+    width: 20%;
+    text-align: center;
+    list-style: none;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+nav a:hover{
+    
+     box-shadow: 
+          
+
+
+        0 0 5px var(--main-color),
+        0 0 10px var(--main-color),
+        0 0 20px var(--main-color),
+        0 0 40px var(--main-color),
+        0 0 80px var(--main-color);
+
+}
+
+:root{
+    --sec-color:#FFC800;
+    --main-color:#00FFFF;
+    --bg-color:#151519;
+    --body-color:#060609;
+    --text-color:#6b7280;
+}
+body{
+    height: 2000px;
+    background-color:var(--body-color) ;
+    font-size: 16px;
+}
+.numbers{
+ width: 80%;
+    margin: auto;
+    margin-top: 50px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.numbers .numbersCard{
+    width: 24%;
+    padding: 50px 0px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: var(--bg-color);
+    border: 0.5px solid var(--main-color);
+    transition: all 0.5s;
+}
+.numbersCard h3{
+    color: var(--main-color);
+    font-size: 2rem;
+}
+.numbersCard p{
+    color: var(--text-color);
+}
+.numbersCard:hover{
+    border: 2px solid var(--main-color);
+    box-shadow:    
+        0px 0px 20px var(--main-color),
+        0px 0px 20px var(--main-color);
+
+        transform: translateY(-5px);
+}
+
+
+
+
+/* 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+
+.container{
+    height: 1000px;
+    background-color: tan;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-evenly;
+}
+.item{
+    width: 200px;
+    height: 200px;
+    background-color: teal;
+    border: 1px solid rosybrown;
+    text-align: center;
+    color: white;
+    flex-grow: 1;
+    flex-shrink: 1; 
+}
+.item2{
+    background-color: rosybrown;
+    flex-grow: 2;
+    flex-shrink: 0;
+    order: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.home{
+    height: 100vh;
+    background-image: url(../images/header-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+nav{
+    
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+nav h2{
+  
+    width: 50%;
+    font-style: italic;
+    color: var(--main-color);
+}
+nav ul {
+    
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+nav ul li{
+    
+    width: 20%;
+    text-align: center;
+    list-style: none;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+nav a:hover{
+    
+     box-shadow: 
+          
+
+
+        0 0 5px var(--main-color),
+        0 0 10px var(--main-color),
+        0 0 20px var(--main-color),
+        0 0 40px var(--main-color),
+        0 0 80px var(--main-color);
+
+}
+
+:root{
+    --sec-color:#FFC800;
+    --main-color:#00FFFF;
+    --bg-color:#151519;
+    --body-color:#060609;
+    --text-color:#6b7280;
+}
+body{
+    height: 2000px;
+    background-color:var(--body-color) ;
+    font-size: 12px;
+}
+.numbers{
+ width: 80%;
+    margin: auto;
+    margin-top: 50px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.numbers .numbersCard{
+    width: 48%;
+    padding: 50px 0px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: var(--bg-color);
+    border: 0.5px solid var(--main-color);
+    transition: all 0.5s;
+}
+.numbersCard h3{
+    color: var(--main-color);
+    font-size: 2rem;
+}
+.numbersCard p{
+    color: var(--text-color);
+}
+.numbersCard:hover{
+    border: 2px solid var(--main-color);
+    box-shadow:    
+        0px 0px 20px var(--main-color),
+        0px 0px 20px var(--main-color);
+
+        transform: translateY(-5px);
+}
+    
+}
+
+@media screen and (max-width: 767px) {
+
+.container{
+    height: 1000px;
+    background-color: tan;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-evenly;
+}
+.item{
+    width: 200px;
+    height: 200px;
+    background-color: teal;
+    border: 1px solid rosybrown;
+    text-align: center;
+    color: white;
+    flex-grow: 1;
+    flex-shrink: 1; 
+}
+.item2{
+    background-color: rosybrown;
+    flex-grow: 2;
+    flex-shrink: 0;
+    order: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.home{
+    height: 100vh;
+    background-image: url(../images/header-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+nav{
+    
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+nav h2{
+  
+    width: 50%;
+    font-style: italic;
+    color: var(--main-color);
+}
+nav ul {
+    
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+nav ul li{
+    
+    width: 20%;
+    text-align: center;
+    list-style: none;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+nav a:hover{
+    
+     box-shadow: 
+          
+
+
+        0 0 5px var(--main-color),
+        0 0 10px var(--main-color),
+        0 0 20px var(--main-color),
+        0 0 40px var(--main-color),
+        0 0 80px var(--main-color);
+
+}
+
+:root{
+    --sec-color:#FFC800;
+    --main-color:#00FFFF;
+    --bg-color:#151519;
+    --body-color:#060609;
+    --text-color:#6b7280;
+}
+body{
+    height: 2000px;
+    background-color:var(--body-color) ;
+    font-size: 8px;
+}
+.numbers{
+ width: 80%;
+    margin: auto;
+    margin-top: 50px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.numbers .numbersCard{
+    width: 100%;
+    padding: 50px 0px;
+    margin-bottom: 20px;
+    margin-bottom: calc(20 * 1rem / 8);;
+
+    border-radius: 20px;
+    text-align: center;
+    background-color: var(--bg-color);
+    border: 0.5px solid var(--main-color);
+    transition: all 0.5s;
+}
+.numbersCard h3{
+    color: var(--main-color);
+    font-size: 2rem;
+}
+.numbersCard p{
+    color: var(--text-color);
+}
+.numbersCard:hover{
+    border: 2px solid var(--main-color);
+    box-shadow:    
+        0px 0px 20px var(--main-color),
+        0px 0px 20px var(--main-color);
+
+        transform: translateY(-5px);
+}
+    
+} */
